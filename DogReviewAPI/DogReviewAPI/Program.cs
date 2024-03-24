@@ -1,5 +1,7 @@
 using DogReviewAPI;
 using DogReviewAPI.Data;
+using DogReviewAPI.Interfaces;
+using DogReviewAPI.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // injects the data in the program file
 builder.Services.AddTransient<Seed>();
+// 
+builder.Services.AddScoped<IDogRepository, DogRepository>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DataContext>(options =>

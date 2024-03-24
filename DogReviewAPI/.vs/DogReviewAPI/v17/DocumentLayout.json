@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\DogReviewApp\\DogReviewAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Migrations\\20240324150027_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DogReviewAPI\\Migrations\\20240324150027_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|c:\\dogreviewapp\\dogreviewapi\\dogreviewapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|solutionrelative:dogreviewapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|c:\\dogreviewapp\\dogreviewapi\\dogreviewapi\\controllers\\dogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|solutionrelative:dogreviewapi\\controllers\\dogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|c:\\dogreviewapp\\dogreviewapi\\dogreviewapi\\repositories\\dogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|solutionrelative:dogreviewapi\\repositories\\dogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|c:\\dogreviewapp\\dogreviewapi\\dogreviewapi\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|solutionrelative:dogreviewapi\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|c:\\dogreviewapp\\dogreviewapi\\dogreviewapi\\interfaces\\idogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|solutionrelative:dogreviewapi\\interfaces\\idogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|c:\\dogreviewapp\\dogreviewapi\\dogreviewapi\\dogreviewapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|solutionrelative:dogreviewapi\\dogreviewapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|c:\\dogreviewapp\\dogreviewapi\\dogreviewapi\\migrations\\20240324150027_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|solutionrelative:dogreviewapi\\migrations\\20240324150027_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A54CBF45-2A5B-453D-8B61-950FDAD9EB31}|DogReviewAPI\\DogReviewAPI.csproj|c:\\dogreviewapp\\dogreviewapi\\dogreviewapi\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,6 +51,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Program.cs",
+              "RelativeDocumentMoniker": "DogReviewAPI\\Program.cs",
+              "ToolTip": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Program.cs",
+              "RelativeToolTip": "DogReviewAPI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T15:49:37.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DogController.cs",
+              "DocumentMoniker": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Controllers\\DogController.cs",
+              "RelativeDocumentMoniker": "DogReviewAPI\\Controllers\\DogController.cs",
+              "ToolTip": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Controllers\\DogController.cs",
+              "RelativeToolTip": "DogReviewAPI\\Controllers\\DogController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T15:43:40.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DogRepository.cs",
+              "DocumentMoniker": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Repositories\\DogRepository.cs",
+              "RelativeDocumentMoniker": "DogReviewAPI\\Repositories\\DogRepository.cs",
+              "ToolTip": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Repositories\\DogRepository.cs",
+              "RelativeToolTip": "DogReviewAPI\\Repositories\\DogRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T15:38:03.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IDogRepository.cs",
+              "DocumentMoniker": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Interfaces\\IDogRepository.cs",
+              "RelativeDocumentMoniker": "DogReviewAPI\\Interfaces\\IDogRepository.cs",
+              "ToolTip": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Interfaces\\IDogRepository.cs",
+              "RelativeToolTip": "DogReviewAPI\\Interfaces\\IDogRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T15:14:02.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DogReviewAPI",
+              "DocumentMoniker": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\DogReviewAPI.csproj",
+              "RelativeDocumentMoniker": "DogReviewAPI\\DogReviewAPI.csproj",
+              "ToolTip": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\DogReviewAPI.csproj",
+              "RelativeToolTip": "DogReviewAPI\\DogReviewAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-24T15:11:53.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "DogReviewAPI\\Data\\DataContext.cs",
+              "ToolTip": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Data\\DataContext.cs",
+              "RelativeToolTip": "DogReviewAPI\\Data\\DataContext.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAADgvxAAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T14:42:15.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "20240324150027_InitialCreate.cs",
               "DocumentMoniker": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Migrations\\20240324150027_InitialCreate.cs",
               "RelativeDocumentMoniker": "DogReviewAPI\\Migrations\\20240324150027_InitialCreate.cs",
@@ -43,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "20240324145051_InitialCreate.cs",
               "DocumentMoniker": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Migrations\\20240324145051_InitialCreate.cs",
               "RelativeDocumentMoniker": "DogReviewAPI\\Migrations\\20240324145051_InitialCreate.cs",
@@ -51,12 +149,11 @@
               "RelativeToolTip": "DogReviewAPI\\Migrations\\20240324145051_InitialCreate.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T14:50:51.823Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-24T14:50:51.823Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Seed.cs",
               "DocumentMoniker": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Seed.cs",
               "RelativeDocumentMoniker": "DogReviewAPI\\Seed.cs",
@@ -64,21 +161,7 @@
               "RelativeToolTip": "DogReviewAPI\\Seed.cs",
               "ViewState": "AQIAAFoAAAAAAAAAAAAUwHQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T14:46:52.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Data\\DataContext.cs",
-              "RelativeDocumentMoniker": "DogReviewAPI\\Data\\DataContext.cs",
-              "ToolTip": "C:\\DogReviewApp\\DogReviewAPI\\DogReviewAPI\\Data\\DataContext.cs",
-              "RelativeToolTip": "DogReviewAPI\\Data\\DataContext.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAUwC4AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T14:42:15.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-24T14:46:52.361Z"
             }
           ]
         }
