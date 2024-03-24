@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DogReviewAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0890919bf347fb6dbe664047b1af0964f7750150")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e0768f756f7b3e3cebdf34b265530cf79f3493d")]
 [assembly: System.Reflection.AssemblyProductAttribute("DogReviewAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DogReviewAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
