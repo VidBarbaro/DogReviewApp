@@ -9,6 +9,8 @@ namespace DogReviewAPI.Helper
         public MappingProfiles()
         {
             CreateMap<Dog, DogDto>();
+            CreateMap<Breed, BreedDto>();
+            CreateMap<Country, CountryDto>();
         }
     }
 }
