@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // injects the data in the program file
 builder.Services.AddTransient<Seed>();
-// 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IDogRepository, DogRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
