@@ -4,7 +4,7 @@ Welcome to the Dog Reviews Web API! This API is being developed as a learning pr
 
 ## Overview
 
-The Dog Reviews API allows users to access and interact with a collection of dog reviews. Users can retrieve reviews, submit new reviews, update existing reviews, and delete reviews. Each review includes information such as the dog's name, breed, rating, and review text.
+The Dog Reviews API allows users to access and interact with a collection of dog reviews. Users can retrieve reviews, submit new reviews, update existing reviews, and delete reviews. Each review includes information such as the dog's name, breed, owner, rating, review text and the reviewer.
 
 ## Technologies Used
 
