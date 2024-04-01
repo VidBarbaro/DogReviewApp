@@ -16,6 +16,16 @@ namespace DogReviewAPI.Repositories
             return _context.Breeds.Any(b =>  b.Id == breedId);
         }
 
+        public bool CreateBreed(Breed breed)
+        {
+            // Change Tracker
+            // is it adding, updating, modifying...
+            // can be connected(99% of the time) or disconnected
+            _context.Add(breed);
+            // this Save function creates the SQL query and executes it in the database
+            return Save();
+        }
+
         public Breed GetBreed(int id)
         {
             return _context.Breeds.Where(b => b.Id == id).FirstOrDefault();
@@ -30,6 +40,12 @@ namespace DogReviewAPI.Repositories
         public ICollection<Dog> GetDogsByBreed(int breedId)
         {
             return _context.DogsBreeds.Where(b => b.BreedId == breedId).Select(d => d.Dog).ToList();
+        }
+
+        public bool Save()
+        {
+            var saved = _context.SaveChanges();
+            return saved > 0 ? true : false;
         }
     }
 }

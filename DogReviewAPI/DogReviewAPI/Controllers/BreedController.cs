@@ -63,5 +63,40 @@ namespace DogReviewAPI.Controllers
 
             return Ok(dogs);
         }
+
+        [HttpPost]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        public IActionResult CreateBreed([FromBody] BreedDto breedCreate)
+        {
+            if(breedCreate == null)
+            {
+                return BadRequest();
+            }
+
+            var breed = _breedRepository.GetBreeds()
+                .Where(b => b.Name.Trim().ToUpper() == breedCreate.Name.Trim().ToUpper()).FirstOrDefault();
+
+            if (breed != null)
+            {
+                ModelState.AddModelError("", "Category already exists");
+                return StatusCode(422, ModelState);
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var breedMap = _mapper.Map<Breed>(breedCreate);
+
+            if (!_breedRepository.CreateBreed(breedMap))
+            {
+                ModelState.AddModelError("", "Something went wrong while saving");
+                return StatusCode(500, ModelState);
+            }
+
+            return Ok("Successfully created");
+        }
     }
 }
