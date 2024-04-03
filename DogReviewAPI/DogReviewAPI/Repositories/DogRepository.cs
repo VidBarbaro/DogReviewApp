@@ -13,6 +13,34 @@ namespace DogReviewAPI.Repositories
             _context = context;
         }
 
+        public bool CreateDog(int ownerId, int breedId, Dog dog)
+        {
+            var dogOwnerEntity = _context.Owners.Where(o => o.Id == ownerId).FirstOrDefault();
+            var breed = _context.Breeds.Where(b => b.Id == breedId).FirstOrDefault();
+
+            // since Dog has 2 join table relationships we have to create the
+            // necessary data that goes in the join tables
+            var dogOwner = new DogOwner()
+            {
+                Owner = dogOwnerEntity,
+                Dog = dog,
+            };
+
+            _context.Add(dogOwner);
+
+            var dogBreed = new DogBreed()
+            {
+                Breed = breed,
+                Dog = dog,
+            };
+
+            _context.Add(dogBreed);
+
+            _context.Add(dog);
+
+            return Save();
+        }
+
         public bool DogExists(int id)
         {
             return _context.Dogs.Any(d => d.Id == id);
@@ -41,6 +69,12 @@ namespace DogReviewAPI.Repositories
         public ICollection<Dog> GetDogs()
         {
             return _context.Dogs.OrderBy(d => d.Id).ToList();
+        }
+
+        public bool Save()
+        {
+            var saved = _context.SaveChanges();
+            return saved > 0 ? true : false;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using DogReviewAPI.Dto;
 using DogReviewAPI.Interfaces;
+using DogReviewAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DogReviewAPI.Controllers
@@ -69,6 +70,42 @@ namespace DogReviewAPI.Controllers
             }
 
             return Ok(reviews);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        public IActionResult CreateReviewer(ReviewerDto reviewerCreate)
+        {
+            if (reviewerCreate == null)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var reviewers = _reviewerRepository.GetReviewers()
+                .Where(r => r.FirstName == reviewerCreate.FirstName && r.LastName == reviewerCreate.LastName)
+                .FirstOrDefault();
+
+            if (reviewers != null)
+            {
+                ModelState.AddModelError("", "Reviewer already exists");
+                return StatusCode(422, ModelState);
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var reviewerMap = _mapper.Map<Reviewer>(reviewerCreate);
+
+            if (!_reviewerRepository.CreateReviewer(reviewerMap))
+            {
+                ModelState.AddModelError("", "Something went wrong while saving");
+                return StatusCode(500, ModelState);
+            }
+
+            return Ok("Succesfully created");
         }
     }
 }

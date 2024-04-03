@@ -9,12 +9,12 @@ namespace DogReviewAPI.Helper
         // mapping configurations
         public MappingProfiles()
         {
-            CreateMap<Dog, DogDto>();
+            CreateMap<Dog, DogDto>().ReverseMap();
             CreateMap<Breed, BreedDto>().ReverseMap();
             CreateMap<Country, CountryDto>().ReverseMap();
             CreateMap<Owner, OwnerDto>().ReverseMap();
-            CreateMap<Review, ReviewDto>();
-            CreateMap<Reviewer, ReviewerDto>();
+            CreateMap<Review, ReviewDto>().ReverseMap();
+            CreateMap<Reviewer, ReviewerDto>().ReverseMap();
         }
     }
 }

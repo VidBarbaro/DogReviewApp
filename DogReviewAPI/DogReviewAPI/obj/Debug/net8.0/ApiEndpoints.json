@@ -219,6 +219,47 @@
   },
   {
     "ContainingType": "DogReviewAPI.Controllers.DogController",
+    "Method": "CreateDog",
+    "RelativePath": "api/Dog",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ownerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "breedId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "dogCreate",
+        "Type": "DogReviewAPI.Dto.DogDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "DogReviewAPI.Controllers.DogController",
     "Method": "GetDog",
     "RelativePath": "api/Dog/{dogId}",
     "HttpMethod": "GET",
@@ -431,6 +472,47 @@
   },
   {
     "ContainingType": "DogReviewAPI.Controllers.ReviewController",
+    "Method": "CreateReview",
+    "RelativePath": "api/Review",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reviewerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "dogId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "reviewCreate",
+        "Type": "DogReviewAPI.Dto.ReviewDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "DogReviewAPI.Controllers.ReviewController",
     "Method": "GetReview",
     "RelativePath": "api/Review/{reviewId}",
     "HttpMethod": "GET",
@@ -516,6 +598,37 @@
           "text/json"
         ],
         "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DogReviewAPI.Controllers.ReviewerController",
+    "Method": "CreateReviewer",
+    "RelativePath": "api/Reviewer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reviewerCreate",
+        "Type": "DogReviewAPI.Dto.ReviewerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
       }
     ]
   },

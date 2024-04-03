@@ -9,5 +9,7 @@ namespace DogReviewAPI.Interfaces
         Dog GetDog(string name);
         decimal GetDogRating(int id);
         bool DogExists(int id);
+        bool CreateDog(int ownerId, int breedId, Dog dog);
+        bool Save();
     }
 }
