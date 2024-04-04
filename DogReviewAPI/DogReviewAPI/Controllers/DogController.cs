@@ -2,6 +2,7 @@
 using DogReviewAPI.Dto;
 using DogReviewAPI.Interfaces;
 using DogReviewAPI.Models;
+using DogReviewAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DogReviewAPI.Controllers
@@ -107,6 +108,43 @@ namespace DogReviewAPI.Controllers
             }
 
             return Ok("Succesfully created");
+        }
+
+        [HttpPut("{dogId}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public IActionResult UpdateDog(int dogId, [FromBody] DogDto updatedDog)
+        {
+            if (updatedDog == null)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (dogId != updatedDog.Id)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (!_dogRepository.DogExists(dogId))
+            {
+                return NotFound();
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var dogMap = _mapper.Map<Dog>(updatedDog);
+
+            if (!_dogRepository.UpdateDog(dogMap))
+            {
+                ModelState.AddModelError("", "Something went wrong while saving");
+                return BadRequest(ModelState);
+            }
+
+            return NoContent();
         }
     }
 }

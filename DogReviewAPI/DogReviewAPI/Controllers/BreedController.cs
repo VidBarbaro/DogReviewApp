@@ -98,5 +98,42 @@ namespace DogReviewAPI.Controllers
 
             return Ok("Successfully created");
         }
+
+        [HttpPut("{breedId}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public IActionResult UpdateBreed(int breedId, [FromBody] BreedDto updatedBreed)
+        {
+            if (updatedBreed == null)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (breedId != updatedBreed.Id)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (!_breedRepository.BreedExists(breedId))
+            {
+                return NotFound();
+            }
+
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var breedMap = _mapper.Map<Breed>(updatedBreed);
+
+            if (!_breedRepository.UpdateBreed(breedMap))
+            {
+                ModelState.AddModelError("", "Something went wrong while saving");
+                StatusCode(500, ModelState);
+            }
+
+            return NoContent();
+        }
     }
 }

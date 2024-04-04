@@ -13,6 +13,11 @@ namespace DogReviewAPI.Interfaces
 
         // post
         bool CreateOwner(Owner owner);
+
+        // put
+        bool UpdateOwner(Owner owner);
+
+        // save
         bool Save();
     }
 }

@@ -9,6 +9,7 @@ namespace DogReviewAPI.Interfaces
         ICollection<Review> GetReviewsOfADog(int dogId);
         bool ReviewExists(int reviewId);
         bool CreateReview(Review review);
+        bool UpdateReview(Review review);
         bool Save();
     }
 }

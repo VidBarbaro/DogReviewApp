@@ -13,5 +13,8 @@ namespace DogReviewAPI.Interfaces
         // post
         bool CreateBreed(Breed breed);
         bool Save();
+
+        // put
+        bool UpdateBreed(Breed breed);
     }
 }

@@ -14,5 +14,8 @@ namespace DogReviewAPI.Interfaces
         // post
         bool CreateCountry(Country country);
         bool Save();
+
+        // put
+        bool UpdateCountry(Country country);
     }
 }

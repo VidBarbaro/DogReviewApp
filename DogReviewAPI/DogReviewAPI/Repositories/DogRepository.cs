@@ -76,5 +76,13 @@ namespace DogReviewAPI.Repositories
             var saved = _context.SaveChanges();
             return saved > 0 ? true : false;
         }
+
+        public bool UpdateDog(Dog dog)
+        {
+            // var dogOwnerEntity = _context.Owners.Where(o => o.Id == ownerId).FirstOrDefault();
+            //var breed = _context.Breeds.Where(b => b.Id == breedId).FirstOrDefault();
+           _context.Update(dog);
+            return Save();
+        }
     }
 }
