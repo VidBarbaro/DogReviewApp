@@ -18,6 +18,12 @@ namespace DogReviewAPI.Repositories
             return Save();
         }
 
+        public bool DeleteOwner(Owner owner)
+        {
+            _context.Remove(owner);
+            return Save();
+        }
+
         public ICollection<Dog> GetDogsByOwner(int ownerId)
         {
             return _context.DogsOwners.Where(o => o.Owner.Id == ownerId).Select(d => d.Dog).ToList();

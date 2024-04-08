@@ -12,10 +12,12 @@ namespace DogReviewAPI.Controllers
     public class DogController : Controller
     {
         private readonly IDogRepository _dogRepository;
+        private readonly IReviewRepository _reviewRepository;
         private readonly IMapper _mapper;
-        public DogController(IDogRepository dogRepository, IMapper mapper)
+        public DogController(IDogRepository dogRepository, IReviewRepository reviewRepository, IMapper mapper)
         {
             _dogRepository = dogRepository;
+            _reviewRepository = reviewRepository;
             _mapper = mapper;
         }
 
@@ -141,6 +143,40 @@ namespace DogReviewAPI.Controllers
             if (!_dogRepository.UpdateDog(dogMap))
             {
                 ModelState.AddModelError("", "Something went wrong while saving");
+                return BadRequest(ModelState);
+            }
+
+            return NoContent();
+        }
+
+        [HttpDelete("{dogId}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public IActionResult DeleteDog(int dogId)
+        {
+            if (!_dogRepository.DogExists(dogId))
+            {
+                return NotFound();
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var reviewsToDelete = _reviewRepository.GetReviewsOfADog(dogId);
+            var dogToDelete = _dogRepository.GetDog(dogId);
+
+            if (!_reviewRepository.DeleteReviews(reviewsToDelete.ToList()))
+            {
+                ModelState.AddModelError("", "Something went wrong when deleting reviews");
+                return BadRequest(ModelState);
+            }
+
+            if (!_dogRepository.DeleteDog(dogToDelete))
+            {
+                ModelState.AddModelError("", "Something went wrong while deleting dog");
                 return BadRequest(ModelState);
             }
 

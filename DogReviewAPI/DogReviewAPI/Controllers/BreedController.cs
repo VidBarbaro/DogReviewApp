@@ -135,5 +135,32 @@ namespace DogReviewAPI.Controllers
 
             return NoContent();
         }
+
+        [HttpDelete("{breedId}")]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(404)]
+        public IActionResult DeleteBreed(int breedId)
+        {
+            if (!_breedRepository.BreedExists(breedId))
+            {
+                return NotFound();
+            }
+
+            var breedToDelete = _breedRepository.GetBreed(breedId);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (!_breedRepository.DeleteBreed(breedToDelete))
+            {
+                ModelState.AddModelError("", "Something went wrong while deleting the breed");
+                StatusCode(500, ModelState);
+            }
+
+            return NoContent();
+        }
     }
 }

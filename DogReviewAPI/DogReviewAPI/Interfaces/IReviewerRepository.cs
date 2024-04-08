@@ -13,5 +13,6 @@ namespace DogReviewAPI.Interfaces
         bool CreateReviewer(Reviewer reviewer);
         bool UpdateReviewer(Reviewer reviewer);
         bool Save();
+        bool DeleteReviewer(Reviewer reviewer);
     }
 }

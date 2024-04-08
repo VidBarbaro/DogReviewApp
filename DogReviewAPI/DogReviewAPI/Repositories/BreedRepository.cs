@@ -26,6 +26,12 @@ namespace DogReviewAPI.Repositories
             return Save();
         }
 
+        public bool DeleteBreed(Breed breed)
+        {
+            _context.Remove(breed);
+            return Save();
+        }
+
         public Breed GetBreed(int id)
         {
             return _context.Breeds.Where(b => b.Id == id).FirstOrDefault();

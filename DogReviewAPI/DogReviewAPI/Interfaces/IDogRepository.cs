@@ -13,5 +13,6 @@ namespace DogReviewAPI.Interfaces
         bool UpdateDog(Dog dog);
         // we could add UpdateDogOwner() & UpdateDogBreed()
         bool Save();
+        bool DeleteDog(Dog dog);
     }
 }

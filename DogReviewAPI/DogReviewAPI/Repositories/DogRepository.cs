@@ -41,6 +41,12 @@ namespace DogReviewAPI.Repositories
             return Save();
         }
 
+        public bool DeleteDog(Dog dog)
+        {
+            _context.Remove(dog);
+            return Save();
+        }
+
         public bool DogExists(int id)
         {
             return _context.Dogs.Any(d => d.Id == id);

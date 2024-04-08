@@ -19,5 +19,8 @@ namespace DogReviewAPI.Interfaces
 
         // save
         bool Save();
+
+        // delete
+        bool DeleteOwner(Owner owner);
     }
 }

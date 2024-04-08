@@ -138,5 +138,32 @@ namespace DogReviewAPI.Controllers
 
             return NoContent();
         }
+
+        [HttpDelete("{ownerId}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public IActionResult DeleteOwner(int ownerId)
+        {
+            if (!_ownerRepository.OwnerExist(ownerId))
+            {
+                return NotFound();
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var ownerToBeDeleted = _ownerRepository.GetOwner(ownerId);
+
+            if (!_ownerRepository.DeleteOwner(ownerToBeDeleted))
+            {
+                ModelState.AddModelError("", "Something went wrong while deleting owner");
+                return StatusCode(500, ModelState);
+            }
+
+            return NoContent();
+        }
     }
 }

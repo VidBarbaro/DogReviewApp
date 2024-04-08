@@ -13,9 +13,14 @@ namespace DogReviewAPI.Interfaces
 
         // post
         bool CreateCountry(Country country);
+
+        // save
         bool Save();
 
         // put
         bool UpdateCountry(Country country);
+
+        // delete
+        bool DeleteCountry(Country country);
     }
 }

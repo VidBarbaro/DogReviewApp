@@ -12,9 +12,14 @@ namespace DogReviewAPI.Interfaces
 
         // post
         bool CreateBreed(Breed breed);
+
+        // save
         bool Save();
 
         // put
         bool UpdateBreed(Breed breed);
+
+        // delete
+        bool DeleteBreed(Breed breed);
     }
 }
